@@ -7,7 +7,7 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="https://cdn.turtlecode.me/images/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title} // TurtleCode</title>
+    <title>{title !== "Home" && title + " // " }TurtleCode{title === "Home" && " // Programmer, web developer, cybersecurity enthusiast"}</title>
   </head>
   <body>
     <slot />
