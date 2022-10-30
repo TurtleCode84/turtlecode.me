@@ -1,15 +1,9 @@
 ---
-const world = "world!";
+import Base from '../layouts/Base.astro';
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/x-icon" href="https://cdn.turtlecode.me/images/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<title>// TurtleCode84</title>
-	</head>
-	<body>
-		<h1>Hello, {world}</h1>
-	</body>
-</html>
+<Base title={pageTitle}>
+  <h1>TurtleCode<span style={{ color: "gray" }}>84</span></h1>
+  <p>Hello, world!</p>
+</Base>
