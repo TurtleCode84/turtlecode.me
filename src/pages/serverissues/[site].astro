@@ -1,7 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
-import sites from 'https://cdn.turtlecode.me/data/websites.json';
 export async function getStaticPaths() {
+  const response = await fetch('https://cdn.turtlecode.me/data/websites.json');
+  const sites = await response.json();
   return sites.map((item) => {
     return {
       params: { site: item.hostname },
