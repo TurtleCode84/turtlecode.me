@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-const { type, site } = Astro.params;
+const urlSearchParams = new URLSearchParams(window.location.search);
+const { type, site } = Object.fromEntries(urlSearchParams.entries());
 var pageTitle = "Error";
 var error = "An error occured, but we're not quite sure what happened.";
 if (type === "down") {
