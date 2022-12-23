@@ -5,10 +5,10 @@ var pageTitle = "Error";
 var error = "An error occured, but we're not quite sure what happened.";
 if (type === "down") {
   pageTitle = "Server issues";
-  error = `${site} is experiencing issues with its servers, you can ${<a href=`https://${site}`>try again</a>} in a few minutes or report this bug in our main ${<a href="https://github.com/TurtleCode84/turtlecode.me">GitHub repository</a>}`;
+  error = `${site} is experiencing issues with its servers, you can <a href="https://${site}">try again</a> in a few minutes or report this bug in our main <a href="https://github.com/TurtleCode84/turtlecode.me">GitHub repository</a>`;
 } else if (type === "maintenance") {
   pageTitle = "Site maintenance"
-  error = `We're working on new improvements for ${site}! This can take up to a full day to complete, so we appreciate your patience and apologize for the inconvenience.${<br/>}(If you really don't want to wait, go ahead and ${<a href=`https://${site}`>try again</a>}.)`;
+  error = `We're working on new improvements for ${site}! This can take up to a full day to complete, so we appreciate your patience and apologize for the inconvenience.<br/>(If you really don't want to wait, go ahead and <a href="https://${site}">try again</a>}.)`;
 }
 ---
 
