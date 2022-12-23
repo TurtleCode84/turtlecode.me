@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import sites from 'https://cdn.turtlecode.me/data/websites.json';
+export async function getStaticPaths() {
+  return sites.map((item) => {
+    return {
+      params: { site: item.hostname },
+      props: { item },
+    };
+  });
+}
+const pageTitle = "Server issues";
+const { site } = Astro.params;
+const { item } = Astro.props;
+---
+
+<Base title={pageTitle}>
+  <h1>Server issues <span style={{ color: "gray" }}>on {item.hostname}</span></h1>
+  <p>We're experiencing some technical difficulties with {item.name}.</p>
+</Base>
