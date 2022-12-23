@@ -17,5 +17,6 @@ const { item } = Astro.props;
 
 <Base title={pageTitle}>
   <h1>Server issues <span style={{ color: "gray" }}>on {item.hostname}</span></h1>
-  <p>We're experiencing some technical difficulties with {item.name}. Please <a href={`https://${item.hostname}`}>try again</a> in a few minutes, otherwise you should submit a bug report at this project's <a href={`https://github.com/${item.github}`}>GitHub repository</a> so we can resolve the issue.<br/>Apologies for the inconvenience!</p>
+  <p>We're experiencing some technical difficulties with {item.name}. Please <a href={`https://${item.hostname}`}>try again</a> in a few minutes, otherwise you should submit a bug report at this project's <a href={`https://github.com/${item.github}`}>GitHub repository</a> so we can resolve the issue.
+  <br/><br/>Apologies for the inconvenience!</p>
 </Base>
